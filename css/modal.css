@@ -1,12 +1,8 @@
-.modal{
+.welcome-overlay{
 
-    position:fixed;
+    position:absolute;
 
     inset:0;
-
-    background:rgba(0,0,0,.65);
-
-    backdrop-filter:blur(8px);
 
     display:flex;
 
@@ -14,33 +10,54 @@
 
     align-items:center;
 
-    z-index:9999;
+    background:rgba(0,0,0,.40);
+
+    backdrop-filter:blur(12px);
+
+    z-index:30;
+
+    transition:opacity .8s ease,
+               visibility .8s ease;
 
 }
 
-.modal-card{
+.welcome-overlay.hide{
 
-    width:min(92%,450px);
+    opacity:0;
 
-    background:white;
+    visibility:hidden;
 
-    padding:50px;
+}
 
-    border-radius:20px;
+.welcome-card{
+
+    width:min(90%,480px);
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:25px;
+
+    padding:55px;
 
     text-align:center;
 
-    box-shadow:0 20px 60px rgba(0,0,0,.2);
+    color:white;
+
+    box-shadow:0 20px 70px rgba(0,0,0,.25);
 
 }
 
-.modal-small{
+.welcome-small{
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
     text-transform:uppercase;
 
-    color:#777;
+    font-size:.85rem;
 
     margin-bottom:20px;
 
@@ -48,14 +65,20 @@
 
 #guestName{
 
-    font-size:3rem;
+    font-family:var(--font-script);
+
+    font-size:4rem;
+
+    font-weight:400;
 
     margin-bottom:25px;
 
 }
 
-.modal-seats{
+.welcome-seats{
 
-    margin-bottom:35px;
+    margin-bottom:40px;
+
+    line-height:1.8;
 
 }

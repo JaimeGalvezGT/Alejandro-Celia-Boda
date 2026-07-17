@@ -61,6 +61,36 @@
 
     <div class="hero-overlay"></div>
 
+    <div id="welcomeOverlay" class="welcome-overlay">
+
+    <div class="welcome-card">
+
+        <p class="welcome-small">
+            Tenemos el honor de invitar a
+        </p>
+
+        <h2 id="guestName"></h2>
+
+        <p class="welcome-seats">
+
+            Esta invitación incluye
+
+            <strong id="guestSeats"></strong>
+
+        </p>
+
+        <button
+            id="enterInvitation"
+            class="btn btn-primary">
+
+            Abrir Invitación
+
+        </button>
+
+    </div>
+
+</div>
+
     <div class="hero-content container">
 
         <p class="hero-blessing">
@@ -92,6 +122,16 @@
 <script src="js/config.js"></script>
 <script src="js/guests.js"></script>
 <script src="js/app.js"></script>
+
+<audio
+    id="backgroundMusic"
+    loop>
+
+    <source
+        src="assets/music/song.mp3"
+        type="audio/mpeg">
+
+</audio>
 
 </body>
 

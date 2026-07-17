@@ -88,3 +88,17 @@
     letter-spacing:2px;
 
 }
+
+.hero{
+
+    transform:scale(1.08);
+
+    transition:transform 7s ease;
+
+}
+
+.hero.loaded{
+
+    transform:scale(1);
+
+}
