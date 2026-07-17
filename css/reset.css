@@ -54,3 +54,17 @@ body.locked{
     height:100vh;
 
 }
+
+html{
+
+    overflow-x:hidden;
+
+}
+
+body{
+
+    overflow-x:hidden;
+
+    width:100%;
+
+}
