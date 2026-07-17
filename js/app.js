@@ -1,3 +1,15 @@
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get("id") || "001";
+
+const guest = guests[id];
+
+document.getElementById("guestName").textContent =
+    guest.name;
+
+document.getElementById("guestSeats").textContent =
+    `${guest.seats} personas`;
+
 document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(".hero").style.backgroundImage =
