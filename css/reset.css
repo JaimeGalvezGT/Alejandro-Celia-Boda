@@ -46,3 +46,11 @@ ul{
     list-style:none;
 
 }
+
+body.locked{
+
+    overflow:hidden;
+
+    height:100vh;
+
+}

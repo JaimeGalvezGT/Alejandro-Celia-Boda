@@ -4,7 +4,7 @@
 
     width:100%;
 
-    height:100vh;
+    min-height:100svh;
 
     display:flex;
 
@@ -18,6 +18,36 @@
 
     background-size:cover;
 
+    background-repeat:no-repeat;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:inherit;
+
+    background-position:center;
+
+    background-size:cover;
+
+    transform:scale(1.08);
+
+    transition:transform 7s ease;
+
+    z-index:0;
+
+}
+
+.hero.loaded::before{
+
+    transform:scale(1);
+
 }
 
 .hero-overlay{
@@ -27,9 +57,14 @@
     inset:0;
 
     background:linear-gradient(
+
         rgba(0,0,0,.35),
+
         rgba(0,0,0,.45)
+
     );
+
+    z-index:1;
 
 }
 
@@ -47,6 +82,12 @@
 
     transition:opacity .8s ease;
 
+    width:100%;
+
+    padding:0 20px;
+
+    box-sizing:border-box;
+
 }
 
 .hero-content.show{
@@ -57,13 +98,13 @@
 
 .hero-blessing{
 
-    letter-spacing:5px;
+    letter-spacing:4px;
 
     text-transform:uppercase;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
-    font-size:.9rem;
+    font-size:.85rem;
 
 }
 
@@ -71,11 +112,11 @@
 
     font-family:var(--font-script);
 
-    font-size:6rem;
-
-    font-weight:400;
+    font-size:clamp(3.5rem,10vw,6rem);
 
     line-height:1;
+
+    font-weight:400;
 
 }
 
@@ -83,32 +124,18 @@
 
     display:block;
 
-    font-size:3rem;
+    font-size:clamp(2rem,6vw,3rem);
 
-    margin:10px 0;
+    margin:12px 0;
 
 }
 
 .hero-date{
 
-    margin:35px 0;
+    margin-top:30px;
 
-    font-size:1.4rem;
+    font-size:clamp(1rem,4vw,1.4rem);
 
     letter-spacing:2px;
-
-}
-
-.hero{
-
-    transform:scale(1.08);
-
-    transition:transform 7s ease;
-
-}
-
-.hero.loaded{
-
-    transform:scale(1);
 
 }

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===========================
     // Configuración del invitado
     // ===========================
-
+    document.body.classList.add("locked");
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id") || "001";
     const guest = guests[id] || {
@@ -64,6 +64,8 @@ enterButton.addEventListener("click", async () => {
     setTimeout(async () => {
 
         heroContent.classList.add("show");
+
+        document.body.classList.remove("locked");
 
         try {
 
