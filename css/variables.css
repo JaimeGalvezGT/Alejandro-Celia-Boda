@@ -1,0 +1,51 @@
+:root{
+
+    /* ========= Colores ========= */
+
+    --color-background:#F8F7F4;
+    --color-surface:#FFFFFF;
+
+    --color-primary:#B7C9DD;
+    --color-primary-dark:#8FA7C0;
+
+    --color-secondary:#95A08D;
+
+    --color-gold:#C7B27B;
+
+    --color-text:#494949;
+
+    --color-text-light:#7A7A7A;
+
+    --color-white:#FFFFFF;
+
+    /* ========= Tipografía ========= */
+
+    --font-title:'Cormorant Garamond', serif;
+
+    --font-script:'Great Vibes', cursive;
+
+    --font-body:'Poppins', sans-serif;
+
+    /* ========= Espaciado ========= */
+
+    --container-width:1200px;
+
+    --section-padding:110px;
+
+    /* ========= Bordes ========= */
+
+    --radius:22px;
+
+    /* ========= Sombras ========= */
+
+    --shadow-sm:0 5px 20px rgba(0,0,0,.05);
+
+    --shadow-md:0 10px 35px rgba(0,0,0,.08);
+
+    --shadow-lg:0 20px 60px rgba(0,0,0,.12);
+
+    /* ========= Transiciones ========= */
+
+    --transition:.35s ease;
+
+}

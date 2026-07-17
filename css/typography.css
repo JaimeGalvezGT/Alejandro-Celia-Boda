@@ -1,0 +1,29 @@
+body{
+
+    font-family:var(--font-body);
+
+    color:var(--color-text);
+
+    background:var(--color-background);
+
+}
+
+h1,h2,h3{
+
+    font-family:var(--font-title);
+
+    font-weight:500;
+
+}
+
+.script{
+
+    font-family:var(--font-script);
+
+}
+
+p{
+
+    line-height:1.8;
+
+}
