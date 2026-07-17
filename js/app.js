@@ -81,4 +81,6 @@ enterButton.addEventListener("click", async () => {
 
 });
 
+startCountdown(new Date(wedding.weddingDate));
+
 });

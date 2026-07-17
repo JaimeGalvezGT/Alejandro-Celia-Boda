@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/countdown.css">
 
 </head>
 
@@ -117,17 +118,47 @@
 
 <section class="section countdown">
 
-    <div class="container">
+<div class="container">
 
-        <h2>Faltan</h2>
+<h2>Faltan</h2>
 
-        <div id="countdown">
+<div class="countdown-grid">
 
-            Aquí irá el contador
+<div class="countdown-item">
 
-        </div>
+<div id="days" class="countdown-number">00</div>
 
-    </div>
+<div class="countdown-label">Días</div>
+
+</div>
+
+<div class="countdown-item">
+
+<div id="hours" class="countdown-number">00</div>
+
+<div class="countdown-label">Horas</div>
+
+</div>
+
+<div class="countdown-item">
+
+<div id="minutes" class="countdown-number">00</div>
+
+<div class="countdown-label">Minutos</div>
+
+</div>
+
+<div class="countdown-item">
+
+<div id="seconds" class="countdown-number">00</div>
+
+<div class="countdown-label">Segundos</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -219,6 +250,7 @@
 
 <script src="js/config.js"></script>
 <script src="js/guests.js"></script>
+<script src="js/countdown.js"></script>
 <script src="js/app.js"></script>
 
 </body>
