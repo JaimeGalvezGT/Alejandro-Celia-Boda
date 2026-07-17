@@ -27,40 +27,43 @@
 
 <body>
 
-
 <header class="hero">
 
     <div class="hero-overlay"></div>
 
+    <!-- Overlay de bienvenida -->
+
     <div id="welcomeOverlay" class="welcome-overlay">
 
-    <div class="welcome-card">
+        <div class="welcome-card">
 
-        <p class="welcome-small">
-            Tenemos el honor de invitar a
-        </p>
+            <p class="welcome-small">
+                Tenemos el honor de invitar a
+            </p>
 
-        <h2 id="guestName"></h2>
+            <h2 id="guestName"></h2>
 
-        <p class="welcome-seats">
+            <p class="welcome-seats">
 
-            Esta invitación incluye
+                Esta invitación incluye
 
-            <strong id="guestSeats"></strong>
+                <strong id="guestSeats"></strong>
 
-        </p>
+            </p>
 
-        <button
-            id="enterInvitation"
-            class="btn btn-primary">
+            <button
+                id="enterInvitation"
+                class="btn btn-primary">
 
-            Abrir Invitación
+                Abrir Invitación
 
-        </button>
+            </button>
+
+        </div>
 
     </div>
 
-</div>
+    <!-- Hero -->
 
     <div class="hero-content container">
 
@@ -78,24 +81,145 @@
 
         </h1>
 
-        <p class="hero-date" id="date"></p>
+        <p id="date" class="hero-date"></p>
 
-        <button class="btn btn-primary" id="openInvitation">
+        <div class="scroll-indicator">
 
-            Abrir Invitación
+            <span>Desliza</span>
 
-        </button>
+            <div class="mouse">
+
+                <div class="wheel"></div>
+
+            </div>
+
+        </div>
 
     </div>
 
 </header>
+
+<!-- VERSÍCULO -->
+
+<section class="section verse">
+
+    <div class="container">
+
+        <h2>"Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto."</h2>
+
+        <p>Colosenses 3:14</p>
+
+    </div>
+
+</section>
+
+<!-- CUENTA REGRESIVA -->
+
+<section class="section countdown">
+
+    <div class="container">
+
+        <h2>Faltan</h2>
+
+        <div id="countdown">
+
+            Aquí irá el contador
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NUESTRA HISTORIA -->
+
+<section class="section story">
+
+    <div class="container">
+
+        <h2>Nuestra Historia</h2>
+
+    </div>
+
+</section>
+
+<!-- CEREMONIA -->
+
+<section class="section ceremony">
+
+    <div class="container">
+
+        <h2>Ceremonia</h2>
+
+    </div>
+
+</section>
+
+<!-- RECEPCIÓN -->
+
+<section class="section reception">
+
+    <div class="container">
+
+        <h2>Recepción</h2>
+
+    </div>
+
+</section>
+
+<!-- DRESS CODE -->
+
+<section class="section dresscode">
+
+    <div class="container">
+
+        <h2>Dress Code</h2>
+
+    </div>
+
+</section>
+
+<!-- GALERÍA -->
+
+<section class="section gallery">
+
+    <div class="container">
+
+        <h2>Galería</h2>
+
+    </div>
+
+</section>
+
+<!-- REGALOS -->
+
+<section class="section gifts">
+
+    <div class="container">
+
+        <h2>Mesa de Regalos</h2>
+
+    </div>
+
+</section>
+
+<!-- RSVP -->
+
+<section class="section whatsapp">
+
+    <div class="container">
+
+        <h2>Confirma tu asistencia</h2>
+
+    </div>
+
+</section>
 
 <audio id="backgroundMusic" loop></audio>
 
 <script src="js/config.js"></script>
 <script src="js/guests.js"></script>
 <script src="js/app.js"></script>
-
 
 </body>
 

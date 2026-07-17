@@ -57,22 +57,28 @@ document.addEventListener("DOMContentLoaded", () => {
     // Abrir invitación
     // ===========================
 
-    enterButton.addEventListener("click", async () => {
+enterButton.addEventListener("click", async () => {
 
-        overlay.classList.add("hide");
+    overlay.classList.add("hide");
+
+    setTimeout(async () => {
 
         heroContent.classList.add("show");
 
         try {
 
+            music.src = wedding.music;
+
             await music.play();
 
         } catch (error) {
 
-            console.error("No se pudo reproducir la música:", error);
+            console.error(error);
 
         }
 
-    });
+    }, 500);
+
+});
 
 });
