@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Configuración del invitado
     // ===========================
     document.body.classList.add("locked");
+    document.documentElement.style.overflow = "hidden";
+document.body.style.overflow = "hidden";
+
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id") || "001";
     const guest = guests[id] || {
@@ -66,6 +69,8 @@ enterButton.addEventListener("click", async () => {
         heroContent.classList.add("show");
 
         document.body.classList.remove("locked");
+        document.documentElement.style.overflow = "";
+document.body.style.overflow = "";
 
         try {
 

@@ -12,18 +12,11 @@
 
     }
 
-.hero-title{
-    font-size:3rem;
-    line-height:1.2;
-}
+    .hero-title{
 
-    .hero-title span{
-    display:block;
-}
+        font-size:4rem;
 
-.hero-title small{
-    margin:8px 0;
-}
+    }
 
     .hero-date{
 

@@ -68,3 +68,21 @@ body{
     width:100%;
 
 }
+
+html{
+
+    width:100%;
+
+    overflow-x:hidden;
+
+}
+
+body{
+
+    width:100%;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
