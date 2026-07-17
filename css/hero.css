@@ -43,6 +43,16 @@
 
     color:white;
 
+    opacity:0;
+
+    transition:opacity .8s ease;
+
+}
+
+.hero-content.show{
+
+    opacity:1;
+
 }
 
 .hero-blessing{
