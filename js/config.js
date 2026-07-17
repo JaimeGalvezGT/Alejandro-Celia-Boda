@@ -2,11 +2,11 @@ const wedding = {
     groom: "Alejandro",
     bride: "Celia",
 
-    weddingDate: "2027-02-14T16:00:00",
+    weddingDate: "2026-10-30T16:00:00",
 
     heroImage: "assets/images/hero.jpg",
 
-    music: "assets/music/song.mp3",
+    music: "assets/music/song.mpeg",
 
     whatsapp: "50255964028",
 
