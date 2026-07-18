@@ -1,0 +1,141 @@
+/*=========================================
+            CEREMONIA
+=========================================*/
+
+.events{
+
+    background:#ffffff;
+
+    padding:110px 20px;
+
+}
+
+.events-title{
+
+    text-align:center;
+
+    font-family:var(--font-script);
+
+    font-size:3.8rem;
+
+    color:#1D2739;
+
+    margin-bottom:20px;
+
+}
+
+.events-subtitle{
+
+    text-align:center;
+
+    color:#597B9C;
+
+    max-width:650px;
+
+    margin:0 auto 70px;
+
+    line-height:1.8;
+
+}
+
+.events-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.event-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.event-icon{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.event-card h3{
+
+    color:#1D2739;
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+
+}
+
+.event-info{
+
+    color:#597B9C;
+
+    margin:14px 0;
+
+    line-height:1.7;
+
+}
+
+.event-button{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 32px;
+
+    border-radius:40px;
+
+    background:#597B9C;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.event-button:hover{
+
+    background:#1D2739;
+
+}
+
+@media(max-width:768px){
+
+.event-card{
+
+padding:35px 25px;
+
+}
+
+.events-title{
+
+font-size:3rem;
+
+}
+
+}

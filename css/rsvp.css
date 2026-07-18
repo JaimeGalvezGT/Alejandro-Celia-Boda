@@ -1,0 +1,95 @@
+/*=========================================
+                RSVP
+=========================================*/
+
+.rsvp{
+
+    background:#1D2739;
+
+    color:white;
+
+    padding:110px 20px;
+
+    text-align:center;
+
+}
+
+.rsvp h2{
+
+    font-family:var(--font-script);
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+    color:#BEB5DD;
+
+}
+
+.rsvp p{
+
+    max-width:650px;
+
+    margin:20px auto;
+
+    line-height:1.9;
+
+    color:#d7dce5;
+
+}
+
+.rsvp-date{
+
+    font-weight:bold;
+
+    color:#BEB5DD;
+
+    margin-top:35px;
+
+}
+
+.whatsapp-button{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    background:#25D366;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+}
+
+.whatsapp-button:hover{
+
+    transform:translateY(-4px);
+
+    background:#1EBE5B;
+
+}
+
+@media(max-width:768px){
+
+.rsvp{
+
+padding:80px 20px;
+
+}
+
+.rsvp h2{
+
+font-size:3rem;
+
+}
+
+}

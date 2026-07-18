@@ -91,3 +91,23 @@ document.body.style.overflow = "";
 startCountdown(new Date(wedding.weddingDate));
 
 });
+
+/*=========================================
+            RSVP WHATSAPP
+=========================================*/
+
+const whatsappButton=document.getElementById("confirmWhatsapp");
+
+if(whatsappButton){
+
+const message=`Hola Alejandro y Celia.
+
+Soy ${guest.name}.
+
+Confirmamos la asistencia de ${guest.seats} persona${guest.seats>1?"s":""}.
+
+¡Nos vemos el 30 de octubre! 🪷`;
+
+whatsappButton.href=`https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent(message)}`;
+
+}
