@@ -1,0 +1,91 @@
+/* ===========================================
+   DIVIDER FLORAL
+=========================================== */
+
+.section-divider{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px 0;
+
+    background:#fff;
+
+    overflow:hidden;
+
+}
+
+.section-divider::before,
+.section-divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    opacity:.18;
+
+    background-repeat:no-repeat;
+    background-size:contain;
+
+}
+
+.section-divider::before{
+
+    left:-40px;
+    top:-40px;
+
+    background-image:url("../assets/images/floral-left.png");
+
+}
+
+.section-divider::after{
+
+    right:-40px;
+    bottom:-40px;
+
+    background-image:url("../assets/images/floral-right.png");
+
+}
+
+.section-divider span{
+
+    position:relative;
+
+    width:180px;
+
+    height:1px;
+
+    background:#ccb29d;
+
+}
+
+.section-divider span::before{
+
+    content:"❦";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:white;
+
+    padding:0 20px;
+
+    color:#b69073;
+
+    font-size:30px;
+
+}
