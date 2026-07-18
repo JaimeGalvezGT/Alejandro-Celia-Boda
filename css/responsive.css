@@ -2,11 +2,17 @@
 
     .hero{
 
-        min-height:100svh;
+        min-height:100dvh;
 
     }
 
     .hero-content{
+
+        width:100%;
+
+        max-width:420px;
+
+        margin:0 auto;
 
         padding:0 24px;
 
@@ -14,39 +20,35 @@
 
     .hero-title{
 
-        font-size:4rem;
+        font-size:3.5rem;
+
+        line-height:1.15;
+
+    }
+
+    .hero-title small{
+
+        font-size:2rem;
 
     }
 
     .hero-date{
 
-        font-size:1.1rem;
+        font-size:1rem;
 
     }
 
-    .countdown{
+    .welcome-card{
 
-        padding:80px 20px;
+        width:92%;
 
-    }
-
-    .countdown-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:16px;
+        padding:35px 24px;
 
     }
 
-    .countdown-item{
+    #guestName{
 
-        padding:24px 16px;
-
-    }
-
-    .countdown-number{
-
-        font-size:2.4rem;
+        font-size:3rem;
 
     }
 

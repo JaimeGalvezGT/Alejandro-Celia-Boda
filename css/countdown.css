@@ -1,7 +1,7 @@
 .countdown{
 
     background:#f8f4ef;
-    padding:80px 20px;
+    padding:90px 20px;
     text-align:center;
 
 }
@@ -11,21 +11,16 @@
     font-family:var(--font-script);
     font-size:3rem;
     color:#8d6e63;
-    margin-bottom:40px;
+    margin-bottom:45px;
 
 }
 
 .countdown-grid{
 
     display:grid;
-
-    grid-template-columns:repeat(2, minmax(130px,160px));
-
+    grid-template-columns:repeat(2, minmax(130px,150px));
     justify-content:center;
-
-    gap:18px;
-
-    margin:0 auto;
+    gap:16px;
 
 }
 
@@ -33,19 +28,19 @@
 
     background:#fff;
 
-    border-radius:22px;
+    border-radius:20px;
 
-    padding:28px 16px;
+    padding:22px 12px;
 
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 
 }
 
 .countdown-number{
 
-    font-size:3rem;
+    font-size:2.8rem;
 
-    font-weight:bold;
+    font-weight:700;
 
     color:#8d6e63;
 
@@ -55,21 +50,21 @@
 
     margin-top:10px;
 
-    letter-spacing:3px;
+    font-size:.75rem;
 
     text-transform:uppercase;
 
-    color:#777;
+    letter-spacing:2px;
 
-    font-size:.8rem;
+    color:#777;
 
 }
 
-@media(min-width:768px){
+@media (min-width:768px){
 
 .countdown-grid{
 
-grid-template-columns:repeat(4,180px);
+grid-template-columns:repeat(4,170px);
 
 gap:25px;
 
@@ -78,6 +73,12 @@ gap:25px;
 .countdown-item{
 
 padding:35px;
+
+}
+
+.countdown-number{
+
+font-size:3.5rem;
 
 }
 

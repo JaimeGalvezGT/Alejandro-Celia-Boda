@@ -112,11 +112,11 @@
 
     font-family:var(--font-script);
 
-    font-size:clamp(3.5rem,10vw,6rem);
+    font-size:clamp(3rem,9vw,5.5rem);
 
-    line-height:1;
+    max-width:700px;
 
-    font-weight:400;
+    margin:auto;
 
 }
 

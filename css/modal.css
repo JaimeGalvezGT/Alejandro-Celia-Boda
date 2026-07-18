@@ -33,7 +33,7 @@
 
 .welcome-card{
 
-    width:min(90%,480px);
+    width:min(92%,420px);
 
     background:rgba(255,255,255,.18);
 
@@ -43,7 +43,7 @@
 
     border-radius:25px;
 
-    padding:55px;
+    padding:40px 28px;
 
     text-align:center;
 
