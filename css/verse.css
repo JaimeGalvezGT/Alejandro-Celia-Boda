@@ -1,0 +1,109 @@
+/*=========================================
+            VERSÍCULO
+=========================================*/
+
+.verse{
+
+    background:#f8f4ef;
+
+    padding:100px 20px;
+
+    text-align:center;
+
+}
+
+.wedding-day{
+
+    margin-bottom:70px;
+
+}
+
+.wedding-day-label{
+
+    font-size:1rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#597B9C;
+
+    margin-bottom:15px;
+
+}
+
+.wedding-day-name{
+
+    font-family:var(--font-script);
+
+    font-size:5rem;
+
+    color:#1D2739;
+
+    font-weight:400;
+
+    line-height:1;
+
+    margin-bottom:15px;
+
+}
+
+.wedding-day-date{
+
+    font-size:1.5rem;
+
+    color:#597B9C;
+
+    letter-spacing:2px;
+
+}
+
+.verse-text{
+
+    max-width:750px;
+
+    margin:60px auto 0;
+
+    font-size:1.35rem;
+
+    line-height:2;
+
+    color:#1D2739;
+
+    font-style:italic;
+
+}
+
+.verse-reference{
+
+    margin-top:30px;
+
+    color:#597B9C;
+
+    font-weight:600;
+
+}
+
+@media(max-width:768px){
+
+.wedding-day-name{
+
+font-size:3.8rem;
+
+}
+
+.wedding-day-date{
+
+font-size:1.2rem;
+
+}
+
+.verse-text{
+
+font-size:1.15rem;
+
+line-height:1.8;
+
+}
+
+}
