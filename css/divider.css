@@ -10,58 +10,48 @@
 
 }
 
-.flower{
+.section-divider::before{
+
+    content:"";
 
     position:absolute;
 
-    width:180px;
+    left:-30px;
 
-    opacity:.55;
+    top:-30px;
 
-}
+    width:220px;
 
-.flower-left{
+    height:220px;
 
-    top:-20px;
+    background:url("../assets/svg/flowers.svg") no-repeat;
 
-    left:-20px;
+    background-size:contain;
 
-}
-
-.flower-right{
-
-    bottom:-20px;
-
-    right:-20px;
+    opacity:.35;
 
 }
 
-.flower path{
+.section-divider::after{
 
-    stroke:#c8a88b;
+    content:"";
 
-}
+    position:absolute;
 
-.flower circle:nth-child(2){
+    right:-30px;
 
-    fill:#b98d72;
+    bottom:-30px;
 
-}
+    width:220px;
 
-.flower circle:nth-child(3){
+    height:220px;
 
-    fill:#d9bba3;
+    background:url("../assets/svg/flowers.svg") no-repeat;
 
-}
+    background-size:contain;
 
-.flower circle:nth-child(4){
+    transform:rotate(180deg);
 
-    fill:#ccb09b;
-
-}
-
-.flower circle:nth-child(5){
-
-    fill:#e7d5c8;
+    opacity:.35;
 
 }
