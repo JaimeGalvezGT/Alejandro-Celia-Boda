@@ -1,18 +1,8 @@
-/* ===========================================
-   DIVIDER FLORAL
-=========================================== */
-
 .section-divider{
 
     position:relative;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:70px 0;
+    height:120px;
 
     background:#fff;
 
@@ -20,72 +10,58 @@
 
 }
 
-.section-divider::before,
-.section-divider::after{
-
-    content:"";
+.flower{
 
     position:absolute;
-
-    width:220px;
-
-    height:220px;
-
-    opacity:.18;
-
-    background-repeat:no-repeat;
-    background-size:contain;
-
-}
-
-.section-divider::before{
-
-    left:-40px;
-    top:-40px;
-
-    background-image:url("../assets/images/floral-left.png");
-
-}
-
-.section-divider::after{
-
-    right:-40px;
-    bottom:-40px;
-
-    background-image:url("../assets/images/floral-right.png");
-
-}
-
-.section-divider span{
-
-    position:relative;
 
     width:180px;
 
-    height:1px;
-
-    background:#ccb29d;
+    opacity:.55;
 
 }
 
-.section-divider span::before{
+.flower-left{
 
-    content:"❦";
+    top:-20px;
 
-    position:absolute;
+    left:-20px;
 
-    left:50%;
+}
 
-    top:50%;
+.flower-right{
 
-    transform:translate(-50%,-50%);
+    bottom:-20px;
 
-    background:white;
+    right:-20px;
 
-    padding:0 20px;
+}
 
-    color:#b69073;
+.flower path{
 
-    font-size:30px;
+    stroke:#c8a88b;
+
+}
+
+.flower circle:nth-child(2){
+
+    fill:#b98d72;
+
+}
+
+.flower circle:nth-child(3){
+
+    fill:#d9bba3;
+
+}
+
+.flower circle:nth-child(4){
+
+    fill:#ccb09b;
+
+}
+
+.flower circle:nth-child(5){
+
+    fill:#e7d5c8;
 
 }
