@@ -1,27 +1,51 @@
+/*=========================================
+  DIVISOR ENTRE SECCIONES
+=========================================*/
+
 .section-divider{
 
-    position:relative;
-    height:180px;
-    background:#ff0000;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:55px 20px;
+
+    background:#ffffff;
 
 }
 
-.section-divider::before{
+.section-divider span{
 
-    content:"";
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:260px;
+
+    height:1px;
+
+    background:#597B9C;
+
+}
+
+.section-divider span::before{
+
+    content:"❦";
 
     position:absolute;
 
-    width:250px;
-    height:250px;
+    background:#ffffff;
 
-    left:0;
-    top:0;
+    padding:0 18px;
 
-    background-image:url("../assets/svg/flowers.svg");
-    background-repeat:no-repeat;
-    background-size:contain;
+    font-size:32px;
 
-    border:5px solid blue;
+    color:#BEB5DD;
 
 }
