@@ -1,12 +1,8 @@
 .section-divider{
 
     position:relative;
-
-    height:120px;
-
-    background:#fff;
-
-    overflow:hidden;
+    height:180px;
+    background:#ff0000;
 
 }
 
@@ -16,42 +12,16 @@
 
     position:absolute;
 
-    left:-30px;
+    width:250px;
+    height:250px;
 
-    top:-30px;
+    left:0;
+    top:0;
 
-    width:220px;
-
-    height:220px;
-
-    background:url("../assets/svg/flowers.svg") no-repeat;
-
+    background-image:url("../assets/svg/flowers.svg");
+    background-repeat:no-repeat;
     background-size:contain;
 
-    opacity:.35;
-
-}
-
-.section-divider::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:-30px;
-
-    bottom:-30px;
-
-    width:220px;
-
-    height:220px;
-
-    background:url("../assets/svg/flowers.svg") no-repeat;
-
-    background-size:contain;
-
-    transform:rotate(180deg);
-
-    opacity:.35;
+    border:5px solid blue;
 
 }
