@@ -107,3 +107,51 @@ right:55px;
 left:55px;
 
 }
+
+/*=========================================
+        ESTILO GENERAL
+=========================================*/
+
+body{
+
+    background:#F8F4EF;
+
+    color:#1D2739;
+
+}
+
+section{
+
+    background:#F8F4EF;
+
+}
+
+.section{
+
+    background:#F8F4EF;
+
+}
+
+p{
+
+    color:#597B9C;
+
+}
+
+h2,h3,h4{
+
+    color:#1D2739;
+
+}
+
+blockquote{
+
+    color:#1D2739;
+
+}
+
+cite{
+
+    color:#597B9C;
+
+}
