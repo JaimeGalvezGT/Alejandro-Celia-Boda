@@ -1,30 +1,57 @@
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get("id") || "001";
+
+const guest = guests[id] || { name: "Invitado", seats: 1 };
+
+const enterButton = document.getElementById("enterInvitation");
+
+const overlay = document.getElementById("welcomeOverlay");
+
+const music = document.getElementById("backgroundMusic");
+
+const heroContent = document.querySelector(".hero-content");
+
+// Bloquear scroll al inicio
+document.body.classList.add("locked");
+
+// Mostrar datos del invitado
+document.getElementById("guestName").textContent = guest.name;
+
+document.getElementById("guestSeats").textContent =
+    `${guest.seats} persona${guest.seats > 1 ? "s" : ""}`;
+
+// Abrir invitación
+enterButton.addEventListener("click", async () => {
+
+    overlay.classList.add("hide");
+
+    document.body.classList.remove("locked");
+
+    heroContent.classList.add("show");
+
+    try {
+
+        music.src = wedding.music;
+
+        await music.play();
+
+    } catch (error) {
+
+        console.log("La reproducción automática fue bloqueada", error);
+
+    }
+
+});
+
+// Configurar portada
 document.addEventListener("DOMContentLoaded", () => {
-
-    // ===========================
-    // Configuración del invitado
-    // ===========================
-    document.body.classList.add("locked");
-    document.documentElement.style.overflow = "hidden";
-document.body.style.overflow = "hidden";
-
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id") || "001";
-    const guest = guests[id] || {
-        name: "Invitado Especial",
-        seats: 1
-    };
-
-    document.getElementById("guestName").textContent = guest.name;
-    document.getElementById("guestSeats").textContent = `${guest.seats} personas`;
-
-    // ===========================
-    // Configuración de la boda
-    // ===========================
 
     document.querySelector(".hero").style.backgroundImage =
         `url('${wedding.heroImage}')`;
 
     document.getElementById("groom").textContent = wedding.groom;
+
     document.getElementById("bride").textContent = wedding.bride;
 
     const date = new Date(wedding.weddingDate);
@@ -36,78 +63,35 @@ document.body.style.overflow = "hidden";
             year: "numeric"
         });
 
-    // ===========================
-    // Elementos
-    // ===========================
-
-    const overlay = document.getElementById("welcomeOverlay");
-    const heroContent = document.querySelector(".hero-content");
-    const music = document.getElementById("backgroundMusic");
-    music.src = wedding.music;
-    const enterButton = document.getElementById("enterInvitation");
-
-    // ===========================
-    // Hero Animation
-    // ===========================
-
+    // Animación del hero
     setTimeout(() => {
-
         document.querySelector(".hero").classList.add("loaded");
-
     }, 200);
 
-    // ===========================
-    // Abrir invitación
-    // ===========================
+    // =========================================
+    // BOTÓN DE WHATSAPP
+    // =========================================
 
-enterButton.addEventListener("click", async () => {
+    const whatsappButton = document.getElementById("confirmWhatsapp");
 
-    overlay.classList.add("hide");
-
-    setTimeout(async () => {
-
-        heroContent.classList.add("show");
-
-        document.body.classList.remove("locked");
-        document.documentElement.style.overflow = "";
-document.body.style.overflow = "";
-
-        try {
-
-            music.src = wedding.music;
-
-            await music.play();
-
-        } catch (error) {
-
-            console.error(error);
-
-        }
-
-    }, 500);
-
-});
-
-startCountdown(new Date(wedding.weddingDate));
-
-});
-
-/*=========================================
-            RSVP WHATSAPP
-=========================================*/
-
-const whatsappButton=document.getElementById("confirmWhatsapp");
-
-if(whatsappButton){
-
-const message=`Hola Alejandro y Celia.
+    const mensaje =
+`Hola Alejandro y Celia 👋
 
 Soy ${guest.name}.
 
-Confirmamos la asistencia de ${guest.seats} persona${guest.seats>1?"s":""}.
+Confirmo mi asistencia a su boda.
 
-¡Nos vemos el 30 de octubre! 🪷`;
+La invitación incluye ${guest.seats} persona${guest.seats > 1 ? "s" : ""}.
 
-whatsappButton.href=`https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent(message)}`;
+¡Nos vemos el 30 de octubre!`;
 
-}
+    const enlace = `https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+
+    whatsappButton.setAttribute("href", enlace);
+
+    // Forzar apertura en nueva pestaña
+    whatsappButton.addEventListener("click", () => {
+        window.open(enlace, "_blank");
+    });
+
+});
