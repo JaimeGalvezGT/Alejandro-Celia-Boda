@@ -96,25 +96,18 @@ startCountdown(new Date(wedding.weddingDate));
             RSVP WHATSAPP
 =========================================*/
 
-document.addEventListener("DOMContentLoaded", () => {
+const whatsappButton=document.getElementById("confirmWhatsapp");
 
-    const whatsappButton = document.getElementById("confirmWhatsapp");
+if(whatsappButton){
 
-    if (!whatsappButton) return;
-
-    const mensaje = `Hola Alejandro y Celia.
+const message=`Hola Alejandro y Celia.
 
 Soy ${guest.name}.
 
-Confirmo mi asistencia a su boda.
+Confirmamos la asistencia de ${guest.seats} persona${guest.seats>1?"s":""}.
 
-La invitación incluye ${guest.seats} persona${guest.seats > 1 ? "s" : ""}.
+¡Nos vemos el 30 de octubre! 🪷`;
 
-¡Nos vemos el 30 de octubre!`;
+whatsappButton.href=`https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent(message)}`;
 
-    whatsappButton.setAttribute(
-        "href",
-        `https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent(mensaje)}`
-    );
-
-});
+}
