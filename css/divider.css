@@ -32,9 +32,12 @@
 
     height:1px;
 
-    background:#BEB5DD;
-
-    opacity:.7;
+    background:linear-gradient(
+        to right,
+        transparent,
+        #BEB5DD,
+        transparent
+    );
 
 }
 
