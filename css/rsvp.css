@@ -22,11 +22,11 @@
 
 .rsvp h2{
 
-    font-family:var(--font-script);
+    font-family:var(--font-script) !important;
 
     font-size:4rem;
 
-    font-weight:400;
+    font-weight:400 !important;
 
     color:#1D2739;
 
