@@ -14,7 +14,7 @@ font-family:var(--font-script);
 
 font-size:4rem;
 
-color:#8d6e63;
+color:#1D2739;
 
 margin-bottom:15px;
 
@@ -28,7 +28,7 @@ margin:0 auto 70px;
 
 line-height:1.9;
 
-color:#777;
+color:#597B9C;
 
 }
 
@@ -60,7 +60,7 @@ transform:translateY(80px);
 
 transition:all .9s ease;
 
-box-shadow:0 15px 40px rgba(0,0,0,.12);
+box-shadow:0 15px 40px rgba(29,39,57,.08);
 
 }
 

@@ -3,18 +3,20 @@
     /* ========= Colores ========= */
 
     --color-background:#F8F7F4;
+
     --color-surface:#FFFFFF;
 
-    --color-primary:#B7C9DD;
-    --color-primary-dark:#8FA7C0;
+    --color-primary:#597B9C;
 
-    --color-secondary:#95A08D;
+    --color-primary-dark:#1D2739;
 
-    --color-gold:#C7B27B;
+    --color-secondary:#BEB5DD;
 
-    --color-text:#494949;
+    --color-gold:#BEB5DD;
 
-    --color-text-light:#7A7A7A;
+    --color-text:#1D2739;
+
+    --color-text-light:#597B9C;
 
     --color-white:#FFFFFF;
 
@@ -38,11 +40,11 @@
 
     /* ========= Sombras ========= */
 
-    --shadow-sm:0 5px 20px rgba(0,0,0,.05);
+    --shadow-sm:0 5px 20px rgba(29,39,57,.05);
 
-    --shadow-md:0 10px 35px rgba(0,0,0,.08);
+    --shadow-md:0 10px 35px rgba(29,39,57,.08);
 
-    --shadow-lg:0 20px 60px rgba(0,0,0,.12);
+    --shadow-lg:0 20px 60px rgba(29,39,57,.12);
 
     /* ========= Transiciones ========= */
 
