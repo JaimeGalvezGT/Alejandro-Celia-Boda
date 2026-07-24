@@ -1,51 +1,55 @@
 /*=========================================
-  DIVISOR ENTRE SECCIONES
+            DIVISORES
 =========================================*/
 
 .section-divider{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:55px 20px;
-
-    background:#ffffff;
-
-}
-
-.section-divider span{
 
     position:relative;
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
 
-    width:260px;
+    align-items:center;
 
-    height:1px;
-
-    background:#597B9C;
+    margin:80px auto;
 
 }
 
-.section-divider span::before{
+.section-divider::after{
 
-    content:"🪷";
+    content:"";
 
     position:absolute;
 
-    background:#ffffff;
+    top:38px;
 
-    padding:0 18px;
+    left:50%;
 
-    font-size:32px;
+    transform:translateX(-50%);
 
-    color:#BEB5DD;
+    width:220px;
+
+    height:1px;
+
+    background:#BEB5DD;
+
+    opacity:.7;
+
+}
+
+.section-divider img{
+
+    width:90px;
+
+    height:auto;
+
+    position:relative;
+
+    z-index:2;
+
+    background:#F8F7F4;
+
+    padding:0 15px;
 
 }
