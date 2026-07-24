@@ -122,6 +122,8 @@
 
 .godparents-grid{
 
+    background:#f8f4ef;
+
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
@@ -132,7 +134,7 @@
 
 .godparent{
 
-    background:#f8f4ef;
+    background:#FFFFFF;
 
     border:1px solid #e8e8e8;
 
