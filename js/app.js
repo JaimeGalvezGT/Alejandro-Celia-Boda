@@ -108,6 +108,44 @@ whatsappButton.href=`https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent
 
 }
 
+/*=========================================
+                REGALOS
+=========================================*/
+
+const openGift = document.getElementById("openGift");
+const closeGift = document.getElementById("closeGift");
+const giftModal = document.getElementById("giftModal");
+
+if(openGift){
+
+    openGift.addEventListener("click",()=>{
+
+        giftModal.classList.add("show");
+
+    });
+
+}
+
+if(closeGift){
+
+    closeGift.addEventListener("click",()=>{
+
+        giftModal.classList.remove("show");
+
+    });
+
+}
+
+giftModal.addEventListener("click",(e)=>{
+
+    if(e.target===giftModal){
+
+        giftModal.classList.remove("show");
+
+    }
+
+});
+
 startCountdown(new Date(wedding.weddingDate));
 
 });
