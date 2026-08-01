@@ -39,14 +39,7 @@
 
 }
 
-.section-divider img{
-
-    width:160px;
-
-    height:auto;
-
-    display:block;
-
-    background:#f8f4ef;
-
+.section-divider img {
+    background-color: transparent !important;
+    mix-blend-mode: multiply; /* Elimina fondos blancos opacos en imágenes */
 }
