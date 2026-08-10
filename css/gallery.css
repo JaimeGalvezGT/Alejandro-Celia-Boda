@@ -1,6 +1,6 @@
 .gallery{
 
-padding:110px 20px;
+padding:64px 20px;
 
 background:var(--color-background);
 
@@ -24,7 +24,7 @@ margin-bottom:15px;
 
 max-width:650px;
 
-margin:0 auto 70px;
+margin:0 auto 40px;
 
 line-height:1.9;
 
@@ -160,7 +160,7 @@ opacity:1;
 
 .gallery{
 
-padding:80px 20px;
+padding:52px 20px;
 
 }
 
