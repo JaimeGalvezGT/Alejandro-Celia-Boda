@@ -1,0 +1,114 @@
+/*=========================================
+        BOTÓN DE MÚSICA (flotante)
+=========================================*/
+
+.music-toggle{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9998;
+
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(89,123,156,.92);
+    color:#F3ECE1;
+    box-shadow:0 8px 22px rgba(29,39,57,.22);
+    backdrop-filter:blur(4px);
+
+    opacity:0;
+    transform:translateY(14px) scale(.9);
+    pointer-events:none;
+    transition:opacity .5s ease, transform .5s ease, background .3s ease;
+}
+
+.music-toggle.show{
+    opacity:1;
+    transform:none;
+    pointer-events:auto;
+}
+
+.music-toggle:hover{
+    background:rgba(29,39,57,.95);
+    transform:translateY(-2px);
+}
+
+.music-toggle svg{
+    width:22px;
+    height:22px;
+    fill:currentColor;
+}
+
+/* Anillo animado mientras suena la música */
+.music-toggle::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    border:1px solid rgba(190,181,221,.7);
+    animation:musicPulse 2.4s ease-out infinite;
+}
+
+.music-toggle.paused::after{
+    animation:none;
+    opacity:0;
+}
+
+@keyframes musicPulse{
+    0%{ transform:scale(1); opacity:.7; }
+    70%{ transform:scale(1.45); opacity:0; }
+    100%{ opacity:0; }
+}
+
+/* Muestra el ícono correcto según el estado */
+.music-toggle .icon-play{ display:none; }
+.music-toggle .icon-pause{ display:block; }
+.music-toggle.paused .icon-play{ display:block; }
+.music-toggle.paused .icon-pause{ display:none; }
+
+/*=========================================
+        LEYENDA EN MEMORIA
+=========================================*/
+
+.memorial{
+    background:var(--color-background);
+    text-align:center;
+    padding:40px 20px 80px;
+}
+
+.memorial-text{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+
+    font-family:var(--font-script);
+    font-size:2.4rem;
+    line-height:1;
+    color:#8A7FB0;
+}
+
+.memorial-text svg{
+    width:.85em;
+    height:.85em;
+    fill:currentColor;
+    flex-shrink:0;
+}
+
+@media(max-width:768px){
+    .memorial-text{
+        font-size:1.9rem;
+    }
+    .music-toggle{
+        width:48px;
+        height:48px;
+        right:16px;
+        bottom:16px;
+    }
+}

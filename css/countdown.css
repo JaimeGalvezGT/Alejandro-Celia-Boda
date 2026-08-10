@@ -1,6 +1,6 @@
 .countdown{
 
-    background:#f8f4ef;
+    background:var(--color-background);
     padding:90px 20px;
     text-align:center;
 

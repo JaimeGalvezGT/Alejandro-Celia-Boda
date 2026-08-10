@@ -4,7 +4,7 @@
 
 .rsvp{
 
-    background:#F8F7F4;
+    background:var(--color-background);
 
     padding:110px 20px;
 

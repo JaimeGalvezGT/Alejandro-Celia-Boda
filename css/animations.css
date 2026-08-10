@@ -1,0 +1,38 @@
+/*=========================================
+   ANIMACIONES DE APARICIÓN AL HACER SCROLL
+   (ligeras, solo CSS + IntersectionObserver)
+=========================================*/
+
+/* El estado inicial oculto solo se aplica cuando el JS está activo,
+   así la página nunca queda en blanco si el JS falla. */
+
+.js-anim .reveal-up{
+    opacity:0;
+    transform:translateY(34px);
+    transition:opacity .9s cubic-bezier(.22,.61,.36,1),
+               transform .9s cubic-bezier(.22,.61,.36,1);
+    will-change:opacity, transform;
+}
+
+.js-anim .reveal-up.is-visible{
+    opacity:1;
+    transform:none;
+}
+
+/* El adorno entra con un pequeño escalado suave */
+.js-anim .section-divider.reveal-up{
+    transform:translateY(16px) scale(.96);
+}
+
+.js-anim .section-divider.reveal-up.is-visible{
+    transform:none;
+}
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce){
+    .js-anim .reveal-up{
+        opacity:1 !important;
+        transform:none !important;
+        transition:none !important;
+    }
+}

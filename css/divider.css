@@ -1,45 +1,46 @@
 /*=========================================
-            DIVISORES
+            DIVISORES / ADORNOS
 =========================================*/
 
 .section-divider{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-    margin:15px auto 10px;
-
+    padding:26px 20px;
+    margin:0;
+    background:transparent;
 }
 
-.section-divider::after{
-
-    content:"";
-
-    position:absolute;
-
-    top:38px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:220px;
-
-    height:1px;
-
-    background:linear-gradient(
-        to right,
-        transparent,
-        #BEB5DD,
-        transparent
-    );
-
+.section-divider img{
+    width:100%;
+    max-width:360px;
+    height:auto;
+    display:block;
+    opacity:.95;
 }
 
-.section-divider img {
-    background-color: transparent !important;
-    mix-blend-mode: multiply; /* Elimina fondos blancos opacos en imágenes */
+/* Adorno pequeño bajo los títulos de sección */
+.title-sprig{
+    display:block;
+    width:112px;
+    height:auto;
+    margin:0 auto 42px;
+    opacity:.9;
+}
+
+@media(max-width:768px){
+
+    .section-divider{
+        padding:14px 20px;
+    }
+
+    .section-divider img{
+        max-width:250px;
+    }
+
+    .title-sprig{
+        width:92px;
+        margin-bottom:32px;
+    }
+
 }

@@ -4,7 +4,7 @@
 
 .verse{
 
-    background:#F8F7F4;
+    background:var(--color-background);
 
     padding:100px 20px;
 

@@ -47,6 +47,28 @@ document.body.style.overflow = "hidden";
     const enterButton = document.getElementById("enterInvitation");
 
     // ===========================
+    // Control de música
+    // ===========================
+
+    const musicToggle = document.getElementById("musicToggle");
+
+    function syncMusicIcon(){
+        musicToggle.classList.toggle("paused", music.paused);
+    }
+
+    musicToggle.addEventListener("click", async () => {
+        if (music.paused) {
+            try { await music.play(); } catch (e) { console.error(e); }
+        } else {
+            music.pause();
+        }
+        syncMusicIcon();
+    });
+
+    music.addEventListener("play", syncMusicIcon);
+    music.addEventListener("pause", syncMusicIcon);
+
+    // ===========================
     // Hero Animation
     // ===========================
 
@@ -83,6 +105,9 @@ document.body.style.overflow = "";
             console.error(error);
 
         }
+
+        musicToggle.classList.add("show");
+        syncMusicIcon();
 
     }, 500);
 

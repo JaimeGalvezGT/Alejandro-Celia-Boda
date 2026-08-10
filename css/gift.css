@@ -4,7 +4,7 @@
 
 .gift{
 
-    background:#F8F4EF;
+    background:var(--color-background);
 
     padding:100px 20px;
 
@@ -104,7 +104,7 @@
 
     max-width:500px;
 
-    background:#F8F7F4;
+    background:var(--color-background);
 
     border-radius:24px;
 
