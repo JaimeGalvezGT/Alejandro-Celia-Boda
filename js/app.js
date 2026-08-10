@@ -9,32 +9,41 @@ document.body.style.overflow = "hidden";
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id") || "001";
-    const guest = guests[id] || {
+    const guest = ((typeof guests !== "undefined") && guests[id]) || {
         name: "Invitado Especial",
         seats: 1
     };
 
-    document.getElementById("guestName").textContent = guest.name;
-    document.getElementById("guestSeats").textContent = `${guest.seats} personas`;
+    const guestNameEl = document.getElementById("guestName");
+    const guestSeatsEl = document.getElementById("guestSeats");
+    if (guestNameEl) guestNameEl.textContent = guest.name;
+    if (guestSeatsEl) guestSeatsEl.textContent = `${guest.seats} personas`;
 
     // ===========================
     // Configuración de la boda
     // ===========================
 
-    document.querySelector(".hero").style.backgroundImage =
-        `url('${wedding.heroImage}')`;
+    if (typeof wedding !== "undefined") {
 
-    document.getElementById("groom").textContent = wedding.groom;
-    document.getElementById("bride").textContent = wedding.bride;
+        const heroEl = document.querySelector(".hero");
+        if (heroEl) heroEl.style.backgroundImage = `url('${wedding.heroImage}')`;
 
-    const date = new Date(wedding.weddingDate);
+        const groomEl = document.getElementById("groom");
+        const brideEl = document.getElementById("bride");
+        if (groomEl) groomEl.textContent = wedding.groom;
+        if (brideEl) brideEl.textContent = wedding.bride;
 
-    document.getElementById("date").textContent =
-        date.toLocaleDateString("es-GT", {
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-        });
+        const date = new Date(wedding.weddingDate);
+
+        const dateEl = document.getElementById("date");
+        if (dateEl) dateEl.textContent =
+            date.toLocaleDateString("es-GT", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            });
+
+    }
 
     // ===========================
     // Elementos
@@ -43,7 +52,6 @@ document.body.style.overflow = "hidden";
     const overlay = document.getElementById("welcomeOverlay");
     const heroContent = document.querySelector(".hero-content");
     const music = document.getElementById("backgroundMusic");
-    music.src = wedding.music;
     const enterButton = document.getElementById("enterInvitation");
 
     // ===========================
@@ -53,20 +61,24 @@ document.body.style.overflow = "hidden";
     const musicToggle = document.getElementById("musicToggle");
 
     function syncMusicIcon(){
-        musicToggle.classList.toggle("paused", music.paused);
+        if (musicToggle && music) musicToggle.classList.toggle("paused", music.paused);
     }
 
-    musicToggle.addEventListener("click", async () => {
-        if (music.paused) {
-            try { await music.play(); } catch (e) { console.error(e); }
-        } else {
-            music.pause();
-        }
-        syncMusicIcon();
-    });
+    if (musicToggle && music) {
 
-    music.addEventListener("play", syncMusicIcon);
-    music.addEventListener("pause", syncMusicIcon);
+        musicToggle.addEventListener("click", () => {
+            if (music.paused) {
+                music.play().catch(() => {});
+            } else {
+                music.pause();
+            }
+            syncMusicIcon();
+        });
+
+        music.addEventListener("play", syncMusicIcon);
+        music.addEventListener("pause", syncMusicIcon);
+
+    }
 
     // ===========================
     // Hero Animation
@@ -74,7 +86,8 @@ document.body.style.overflow = "hidden";
 
     setTimeout(() => {
 
-        document.querySelector(".hero").classList.add("loaded");
+        const heroEl2 = document.querySelector(".hero");
+        if (heroEl2) heroEl2.classList.add("loaded");
 
     }, 200);
 
@@ -82,36 +95,33 @@ document.body.style.overflow = "hidden";
     // Abrir invitación
     // ===========================
 
-enterButton.addEventListener("click", async () => {
+if (enterButton) {
 
-    overlay.classList.add("hide");
+enterButton.addEventListener("click", () => {
 
-    setTimeout(async () => {
+    if (overlay) overlay.classList.add("hide");
 
-        heroContent.classList.add("show");
+    setTimeout(() => {
+
+        if (heroContent) heroContent.classList.add("show");
 
         document.body.classList.remove("locked");
         document.documentElement.style.overflow = "";
-document.body.style.overflow = "";
+        document.body.style.overflow = "";
 
-        try {
-
-            music.src = wedding.music;
-
-            await music.play();
-
-        } catch (error) {
-
-            console.error(error);
-
+        if (music) {
+            if (typeof wedding !== "undefined" && !music.src) music.src = wedding.music;
+            music.play().catch(() => {});
         }
 
-        musicToggle.classList.add("show");
+        if (musicToggle) musicToggle.classList.add("show");
         syncMusicIcon();
 
     }, 500);
 
 });
+
+}
 
 /*=========================================
             RSVP WHATSAPP
@@ -171,6 +181,8 @@ giftModal.addEventListener("click",(e)=>{
 
 });
 
-startCountdown(new Date(wedding.weddingDate));
+if (typeof startCountdown === "function" && typeof wedding !== "undefined") {
+    startCountdown(new Date(wedding.weddingDate));
+}
 
 });
