@@ -17,7 +17,10 @@ document.body.style.overflow = "hidden";
     const guestNameEl = document.getElementById("guestName");
     const guestSeatsEl = document.getElementById("guestSeats");
     if (guestNameEl) guestNameEl.textContent = guest.name;
-    if (guestSeatsEl) guestSeatsEl.textContent = `${guest.seats} personas`;
+    if (guestSeatsEl) {
+    const textoInvitados = guest.seats === 1 ? "invitado" : "invitados";
+    guestSeatsEl.textContent = `${guest.seats} ${textoInvitados}`;
+}
 
     // ===========================
     // Configuración de la boda
