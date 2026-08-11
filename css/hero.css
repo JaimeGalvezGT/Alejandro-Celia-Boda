@@ -139,3 +139,64 @@
     letter-spacing:2px;
 
 }
+
+/* Indicador de scroll: "Desliza" + flecha animada */
+.scroll-indicator{
+
+    margin-top:34px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+.scroll-text{
+
+    font-size:.7rem;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    opacity:.85;
+
+}
+
+.scroll-arrow{
+
+    width:26px;
+
+    height:26px;
+
+    fill:none;
+
+    stroke:#ffffff;
+
+    stroke-width:2;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+
+    animation:scrollBounce 1.6s ease-in-out infinite;
+
+}
+
+@keyframes scrollBounce{
+
+    0%,100%{ transform:translateY(0); opacity:.75; }
+
+    50%{ transform:translateY(8px); opacity:1; }
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .scroll-arrow{ animation:none; }
+
+}
