@@ -46,6 +46,14 @@ const guests = {
 
         seats:2
 
+    },
+
+    "007":{
+
+        name:"Sr. Samuel Oliva",
+
+        seats:2
+
     }
 
 }
