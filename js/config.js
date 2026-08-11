@@ -8,7 +8,7 @@ const wedding = {
 
     music: "assets/music/song.mpeg",
 
-    whatsapp: "50255964028",
+    whatsapp: "50255862404",
 
     bibleVerse: "Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto.",
 
