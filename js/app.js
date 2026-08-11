@@ -137,7 +137,7 @@ Soy ${guest.name}.
 
 Confirmamos la asistencia de ${guest.seats} persona${guest.seats>1?"s":""}.
 
-¡Nos vemos el 30 de octubre! 🪷`;
+¡Nos vemos el 30 de octubre!`;
 
 whatsappButton.href=`https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent(message)}`;
 
