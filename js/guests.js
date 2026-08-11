@@ -2,7 +2,7 @@ const guests = {
 
     "001":{
 
-        name:"Familia Cabrera Reynosa",
+        name:"Familia Quiñonez Reynosa",
 
         seats:4
 
