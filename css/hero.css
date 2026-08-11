@@ -200,3 +200,19 @@
     .scroll-arrow{ animation:none; }
 
 }
+
+.hero-time{
+
+    margin-top:-20px;
+
+    font-family:var(--font-body);
+
+    font-size:1.2rem;
+
+    letter-spacing:3px;
+
+    color:white;
+
+    text-align:center;
+
+}
