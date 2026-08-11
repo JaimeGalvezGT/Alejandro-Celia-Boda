@@ -10,7 +10,7 @@ const guests = {
 
     "002":{
 
-        name:"Abimael López Retana",
+        name:"Sr. Abimael López Retana",
 
         seats:1
 
@@ -18,7 +18,7 @@ const guests = {
 
     "003":{
 
-        name:"Lilian Ayala",
+        name:"Sra. Lilian Ayala",
 
         seats:1
 
@@ -26,9 +26,25 @@ const guests = {
 
     "004":{
 
-        name:"Lisbeth Gálvez",
+        name:"Srta. Lisbeth Gálvez",
 
         seats:1
+
+    },
+
+    "005":{
+
+        name:"Yuer Fotografía",
+
+        seats:2
+
+    },
+
+    "006":{
+
+        name:"Sr. Jaime Gálvez",
+
+        seats:2
 
     }
 
