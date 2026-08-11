@@ -2,7 +2,7 @@ const guests = {
 
     "001":{
 
-        name:"Familia Gálvez",
+        name:"Familia Cabrera Reynosa",
 
         seats:4
 
@@ -10,17 +10,25 @@ const guests = {
 
     "002":{
 
-        name:"Juan Pérez",
+        name:"Abimael López Retana",
 
-        seats:2
+        seats:1
 
     },
 
     "003":{
 
-        name:"Familia López",
+        name:"Lilian Ayala",
 
-        seats:6
+        seats:1
+
+    },
+
+    "004":{
+
+        name:"Lisbeth Gálvez",
+
+        seats:1
 
     }
 
