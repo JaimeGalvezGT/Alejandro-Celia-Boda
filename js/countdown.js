@@ -8,34 +8,39 @@ function startCountdown(targetDate){
     function update(){
 
         const now = new Date();
-
         const distance = targetDate - now;
 
         if(distance <= 0){
 
-            days.textContent="00";
-            hours.textContent="00";
-            minutes.textContent="00";
-            seconds.textContent="00";
+            days.textContent = "00";
+            hours.textContent = "00";
+            minutes.textContent = "00";
+            seconds.textContent = "00";
 
             return;
-
         }
 
-        const d=Math.floor(distance/(1000*60*60*24));
-        const h=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-        const m=Math.floor((distance%(1000*60*60))/(1000*60));
-        const s=Math.floor((distance%(1000*60))/1000);
+        const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((distance % (1000 * 60)) / 1000);
 
-        days.textContent=String(d).padStart(2,"0");
-        hours.textContent=String(h).padStart(2,"0");
-        minutes.textContent=String(m).padStart(2,"0");
-        seconds.textContent=String(s).padStart(2,"0");
-
+        days.textContent = String(d).padStart(2, "0");
+        hours.textContent = String(h).padStart(2, "0");
+        minutes.textContent = String(m).padStart(2, "0");
+        seconds.textContent = String(s).padStart(2, "0");
     }
 
     update();
-
-    setInterval(update,1000);
-
+    setInterval(update, 1000);
 }
+
+
+// ======================================
+// Fecha y hora de la boda
+// 30 de octubre de 2026 - 4:00 PM
+// ======================================
+
+const weddingDate = new Date(2026, 9, 30, 16, 0, 0);
+
+startCountdown(weddingDate);
