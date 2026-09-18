@@ -254,5 +254,13 @@ const guests = {
 
         seats:3
 
+    },
+
+        "033":{
+
+        name:"Fam. Gálvez Morán",
+
+        seats:3
+
     }
 }
