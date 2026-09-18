@@ -260,7 +260,7 @@ const guests = {
 
         name:"Fam. Gálvez Morán",
 
-        seats:3
+        seats:4
 
     }
 }
