@@ -268,7 +268,7 @@ const guests = {
 
         name:"Mauricio Santoro´s",
 
-        seats:4
+        seats:1
 
     }
 }
